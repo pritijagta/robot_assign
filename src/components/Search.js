@@ -12,7 +12,9 @@ export default function Search()
 
   async function Generateimage()
    {
-    
+       
+        if(inputString !=='')
+        {
        
           const url = `https://robohash.org/${(inputString)}`;
           const response = await fetch(url);
@@ -21,6 +23,7 @@ export default function Search()
           const imageBlob = await response.blob();
     
           const imageUrl = URL.createObjectURL(imageBlob);
+          
 
           if (!uniqueTexts.includes(inputString)) {
            
@@ -30,7 +33,14 @@ export default function Search()
            
             alert("Same text entered. Please enter a different text.");
           }
-        } 
+        }
+        else
+        {
+          alert("Enter some text");
+        }
+       
+   }
+     
       
     
         
@@ -60,7 +70,7 @@ function textinput(event)
           
           {imageUrls.map((url) => (
              <div className='col-4' >
-            <img  src={url} alt={`Generated Robot `} />
+            <img  src={url}  />
             </div>
           ))}
          
