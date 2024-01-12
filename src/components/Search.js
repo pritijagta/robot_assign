@@ -6,6 +6,8 @@ export default function Search()
 {
   const [inputString, setInputString] = useState('');
   const [imageUrls, setImageUrls] = useState([]);
+  const [uniqueTexts, setUniqueTexts] = useState([]);
+  
 
 
   async function Generateimage()
@@ -19,11 +21,19 @@ export default function Search()
           const imageBlob = await response.blob();
     
           const imageUrl = URL.createObjectURL(imageBlob);
-    
-         
-          setImageUrls([...imageUrls,imageUrl]);
-    
+
+          if (!uniqueTexts.includes(inputString)) {
+           
+            setImageUrls([...imageUrls, imageUrl]);
+            setUniqueTexts([...uniqueTexts, inputString]);
+          } else {
+           
+            alert("Same text entered. Please enter a different text.");
+          }
         } 
+      
+    
+        
       
     
       
@@ -49,7 +59,7 @@ function textinput(event)
           <h2 className='text-center'>Robot List:</h2>
           
           {imageUrls.map((url) => (
-             <div className='col-4'>
+             <div className='col-4' >
             <img  src={url} alt={`Generated Robot `} />
             </div>
           ))}
