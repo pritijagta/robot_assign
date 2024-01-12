@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/robot_assign/static/css/main.51116b2c.css",
-    "main.js": "/robot_assign/static/js/main.38c5ac16.js",
+    "main.js": "/robot_assign/static/js/main.031c7773.js",
     "static/js/787.7058dc4d.chunk.js": "/robot_assign/static/js/787.7058dc4d.chunk.js",
     "index.html": "/robot_assign/index.html",
     "main.51116b2c.css.map": "/robot_assign/static/css/main.51116b2c.css.map",
-    "main.38c5ac16.js.map": "/robot_assign/static/js/main.38c5ac16.js.map",
+    "main.031c7773.js.map": "/robot_assign/static/js/main.031c7773.js.map",
     "787.7058dc4d.chunk.js.map": "/robot_assign/static/js/787.7058dc4d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.51116b2c.css",
-    "static/js/main.38c5ac16.js"
+    "static/js/main.031c7773.js"
   ]
 }
